@@ -16,6 +16,7 @@ be adapted to the destination repository before they are committed.
 | [Feature request](other-templates/2-feature-request.yml) | Problem-focused enhancement proposals | `.github/ISSUE_TEMPLATE/2-feature-request.yml` |
 | [Question](other-templates/3-question.yml) | Support requests when GitHub Discussions is not used | `.github/ISSUE_TEMPLATE/3-question.yml` |
 | [Issue configuration](other-templates/config.yml) | Blank-issue and support-link settings | `.github/ISSUE_TEMPLATE/config.yml` |
+| [Label catalog](other-templates/labels.json) | Consistent type, status, priority, and area labels | Repository labels |
 | [Pull request](other-templates/pull_request_template.md) | Concise change, validation, and risk reporting | `.github/pull_request_template.md` |
 | [Contributing guide](other-templates/CONTRIBUTING.md) | Repository-specific contribution instructions | `CONTRIBUTING.md` |
 | [Code of Conduct](other-templates/CODE_OF_CONDUCT.md) | Community expectations and enforcement | `CODE_OF_CONDUCT.md` |
@@ -47,6 +48,23 @@ Repository-specific templates should take precedence over these general
 starting points. Projects involving research data, legal records, security
 reports, or sensitive information usually need additional source and privacy
 requirements.
+
+## Apply the label catalog
+
+The label catalog provides a small shared vocabulary while retaining familiar
+GitHub labels such as `bug`, `enhancement`, and `good first issue`. Status,
+priority, and area labels use prefixes so related labels sort together.
+
+Run the synchronization helper from this repository and pass the destination
+repository as `OWNER/REPOSITORY`:
+
+```bash
+scripts/sync-labels.sh OWNER/REPOSITORY
+```
+
+The helper requires authenticated GitHub CLI access and `jq`. It creates or
+updates labels in the catalog. It does not delete labels that exist only in the
+destination repository.
 
 ## Automatic GitHub defaults
 

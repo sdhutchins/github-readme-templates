@@ -1,0 +1,107 @@
+[
+  {
+    "name": "bug",
+    "color": "D73A4A",
+    "description": "A confirmed or reproducible defect"
+  },
+  {
+    "name": "enhancement",
+    "color": "A2EEEF",
+    "description": "A new capability or improvement"
+  },
+  {
+    "name": "documentation",
+    "color": "0075CA",
+    "description": "Documentation additions or corrections"
+  },
+  {
+    "name": "maintenance",
+    "color": "6F42C1",
+    "description": "Internal upkeep without intended user-facing behavior changes"
+  },
+  {
+    "name": "question",
+    "color": "D876E3",
+    "description": "A focused usage or support question"
+  },
+  {
+    "name": "dependencies",
+    "color": "0366D6",
+    "description": "Dependency additions or updates"
+  },
+  {
+    "name": "breaking change",
+    "color": "B60205",
+    "description": "A change requiring users to update existing behavior"
+  },
+  {
+    "name": "good first issue",
+    "color": "7057FF",
+    "description": "An approachable contribution for a new contributor"
+  },
+  {
+    "name": "help wanted",
+    "color": "008672",
+    "description": "A contribution from the wider community is welcome"
+  },
+  {
+    "name": "status: needs triage",
+    "color": "FBCA04",
+    "description": "Needs initial review and classification"
+  },
+  {
+    "name": "status: needs information",
+    "color": "D876E3",
+    "description": "Cannot proceed without additional information"
+  },
+  {
+    "name": "status: blocked",
+    "color": "B60205",
+    "description": "Blocked by another decision, issue, or dependency"
+  },
+  {
+    "name": "priority: high",
+    "color": "B60205",
+    "description": "Should be addressed before normal-priority work"
+  },
+  {
+    "name": "priority: medium",
+    "color": "FBCA04",
+    "description": "Normal planning priority"
+  },
+  {
+    "name": "priority: low",
+    "color": "C2E0C6",
+    "description": "Useful but not time-sensitive"
+  },
+  {
+    "name": "area: documentation",
+    "color": "0075CA",
+    "description": "README files, guides, examples, or reference material"
+  },
+  {
+    "name": "area: community",
+    "color": "5319E7",
+    "description": "Contribution, conduct, issue, or pull request infrastructure"
+  },
+  {
+    "name": "area: workflows",
+    "color": "1D76DB",
+    "description": "Automation, continuous integration, or deployment workflows"
+  },
+  {
+    "name": "duplicate",
+    "color": "CFD3D7",
+    "description": "Already tracked by another issue or pull request"
+  },
+  {
+    "name": "invalid",
+    "color": "E4E669",
+    "description": "Does not contain an actionable or valid request"
+  },
+  {
+    "name": "wontfix",
+    "color": "FFFFFF",
+    "description": "Will not be addressed under the current project scope"
+  }
+]
