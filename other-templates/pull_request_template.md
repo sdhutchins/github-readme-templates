@@ -1,41 +1,27 @@
-### This pull request addresses issue #
+## Summary
 
-### Please check if the PR fulfills these requirements
+<!-- Explain what changed and why. -->
 
-- [ ] The commit message(s) follows our guidelines.
-- [ ] Tests for the changes have been added (for bug fixes / features).
-- [ ] Docs have been added / updated (for bug fixes / features).
+## Related issue
 
-### What kind of change does this PR introduce?
+<!-- Use "Closes #123" when merging this pull request should close an issue. -->
 
-<!-- Bug fix, feature, docs update, ... -->
+## Changes
 
-### What is the current behavior?
+-
 
-<!-- You can also link to an open issue here -->
+## Validation
 
-### What is the new behavior (if this is a feature change)?
+<!-- List exact commands and relevant manual checks. -->
 
-### Does this PR introduce a breaking change?
+- [ ] Tests pass.
+- [ ] Documentation is updated when needed.
+- [ ] Generated files are updated when needed.
 
-<!-- What changes might users need to make in their application due to this PR? -->
+## Risks and limitations
 
-### Features Added
+<!-- Describe breaking changes, untested paths, migrations, or known limitations. -->
 
-- Feature added - *details*
+## Screenshots
 
-### Bugs Fixed
-
-- Bug fixed - *details*
-
-### Features Deprecated
-
-- Feature deprecated - *details*
-
-### Other information
-
----
-
-⚠️ **Please request a review from @sdhutchins before merging!**
-
-<!-- Delete any unused sections above before submitting -->
+<!-- Include before and after images for visible interface changes. Otherwise remove this section. -->

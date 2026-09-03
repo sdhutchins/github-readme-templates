@@ -1,97 +1,51 @@
 # Contributing
 
-We welcome contributions! This document provides guidelines for contributing to this project.
+Thank you for contributing. This guide should be adapted to the repository's
+actual development and review process before publication.
 
-## Submitting Bugs
+## Before opening an issue
 
-### Before Submitting
+- Search existing issues and documentation.
+- Remove credentials, personal information, and sensitive data.
+- Use the issue form that best matches the request.
+- For a bug, include a minimal reproduction and complete relevant output.
 
-Before submitting a bug report, please do the following:
+Security vulnerabilities and Code of Conduct reports should use the private
+reporting routes documented by the project, not a public issue.
 
-- **Make sure you're on the latest version.** Your problem may have been solved already.
-- **Try older versions.** If you're on the latest release, try rolling back a few minor versions to help narrow down when the problem first arose.
-- **Try switching up dependency versions.** Try upgrading/downgrading dependencies as well.
-- **Search the project's issue tracker** to make sure it's not a known issue.
-- **Check with the community** in case the problem is non-bug-related.
+## Prepare a change
 
-### Bug Report Contents
+1. Fork or clone the repository.
+2. Create a focused branch from the documented base branch.
+3. Make one coherent change and avoid unrelated formatting.
+4. Add focused tests when behavior changes.
+5. Update user-facing documentation when needed.
 
-Make sure your report includes:
+Replace the examples below with commands verified in the destination
+repository.
 
-- **Operating system:** Windows? macOS? Linux? Include version details (e.g., Windows 11 64-bit, macOS Ventura 13.6, Ubuntu 22.04).
-- **Programming language version:** Include the interpreter/compiler version (e.g., Python 3.10.5, R 4.3.0).
-- **Software version:** Which version(s) of the software are you using?
-- **Installation method:** How did you install the runtime and software? (OS packages, pyenv, from source, Conda, virtualenv, etc.)
-- **Steps to reproduce:** Include a copy of your code, the command you used, and the full output. Try to pare down your code to a simple "base case" that still reproduces the bug.
+```bash
+REPLACE_WITH_INSTALL_COMMAND
+REPLACE_WITH_TEST_COMMAND
+REPLACE_WITH_LINT_COMMAND
+```
 
-## Contributing Changes
+If a command cannot be run, explain why in the pull request.
 
-### Licensing
+## Open a pull request
 
-By contributing to this project, you agree that your contributions will be licensed under the same terms as the rest of the project (see the `LICENSE` file in the repository root).
+- Describe the problem and the chosen solution.
+- Link the relevant issue when one exists.
+- List the validation performed.
+- Identify breaking changes, incomplete coverage, or other risks.
+- Include screenshots for visible interface changes.
 
-- Per-file copyright/license headers are typically not needed. Please don't add your own copyright headers to new files unless the project's license actually requires them.
+Reviewers may request revisions before merging. A passing automated check does
+not replace review of behavior, documentation, source material, or project-
+specific constraints.
 
-### Version Control
+## Conduct and licensing
 
-- **Always make a new branch** for your work, no matter how small.
-- **Don't submit unrelated changes in the same branch/pull request.**
-- **Base your branch appropriately:**
-  - **Bug fixes** should be based on the branch named after the **oldest supported release line** the bug affects.
-  - **New features** should branch off of **the main branch**.
-  - If your PR has been sidelined for a while, **rebase or merge to latest main** before resubmitting.
-
-### Code Formatting
-
-- **Follow the style you see used in the primary repository.** Consistency with the rest of the project always trumps other considerations.
-- For Python projects, follow PEP-8 guidelines (with any project-specific deviations).
-
-### Documentation
-
-Documentation is required for all contributions:
-
-- **Docstrings/API documentation** must be created or updated for public API functions/methods/etc.
-  - For Python, include `versionadded` or `versionchanged` directives in docstrings when applicable.
-- **Prose documentation** should be updated for new features, including useful example code snippets.
-- **Changelog entry** should credit the contributor and any individuals instrumental in identifying the problem.
-
-### Tests
-
-Tests are required for all contributions:
-
-- **Bug fixes** must include a test proving the existence of the bug being fixed.
-- **New features** must include tests proving they actually work.
-- Writing tests before the implementation is strongly encouraged (test-first development).
-
-## Workflow Example
-
-Here's an example workflow for contributing:
-
-### Preparing Your Fork
-
-1. Fork the repository on GitHub.
-2. Clone your fork: `git clone git@github.com:yourname/theproject.git`
-3. `cd theproject`
-4. Create and activate a virtual environment (if applicable).
-5. Install development requirements: `pip install -r dev-requirements.txt` (or equivalent).
-6. Create a branch: `git checkout -b fix-description main` (or appropriate base branch).
-
-### Making Your Changes
-
-1. Add a changelog entry crediting yourself.
-2. Write tests expecting the correct/fixed functionality; make sure they fail initially.
-3. Implement your changes.
-4. Run tests again, making sure they pass.
-5. Update documentation as needed.
-6. Commit your changes: `git commit -m "Brief description of changes"`
-
-### Creating Pull Requests
-
-1. Push your branch: `git push origin HEAD`
-2. Visit GitHub and click the "Pull request" button.
-3. In the description field, reference the issue number (if fixing an existing issue) or describe the issue and your fix.
-4. Submit and be patient - maintainers will review when they can.
-
-## Questions?
-
-If you have questions about contributing, please open an issue or contact the maintainers.
+Follow the project's [Code of Conduct](CODE_OF_CONDUCT.md). Contributions are
+licensed under the same terms as the repository unless its documentation says
+otherwise.
