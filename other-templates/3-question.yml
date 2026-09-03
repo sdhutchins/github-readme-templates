@@ -1,22 +1,30 @@
 name: Question
-description: Ask a question or request help
+description: Ask for help when GitHub Discussions is not available
 title: "[Question]: "
 labels: ["question"]
+assignees: []
 body:
   - type: textarea
     id: question
     attributes:
       label: Question
-      description: What would you like to know?
-      placeholder: Ask your question here
+      description: What would you like to understand or accomplish?
+      placeholder: State one focused question.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempted
+    attributes:
+      label: What have you tried?
+      description: Include relevant documentation, commands, or approaches you already checked.
     validations:
       required: true
 
   - type: textarea
     id: context
     attributes:
-      label: Additional Context
-      description: Add any relevant context, code examples, or information
-      placeholder: Any additional information that might be helpful
+      label: Additional context
+      description: Add versions, examples, or links that help explain the question.
     validations:
       required: false

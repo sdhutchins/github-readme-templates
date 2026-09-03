@@ -1,50 +1,55 @@
-# Project Title
+# Project title
 
-<!-- markdown-link-check-disable -->
-[![Perform linting - Markdown](https://github.com/username/repo/actions/workflows/linting.yml/badge.svg)](https://github.com/username/repo/actions/workflows/linting.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![R Version](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
-[![Build Status](https://github.com/username/repo/actions/workflows/ci.yml/badge.svg)](https://github.com/username/repo/actions/workflows/ci.yml)
-[![Code Coverage](https://codecov.io/gh/username/repo/branch/main/graph/badge.svg)](https://codecov.io/gh/username/repo)
-<!-- markdown-link-check-enable -->
-This is a long description.
+<!-- Describe what the project does and who it is for in one or two sentences. -->
 
-## Table of Contents
+## Project background
 
-- [Project Background](#project-background)
-- [Install & Setup](#install--setup)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Authors](#authors)
+<!-- Explain the problem, purpose, and important scientific or technical context. -->
 
-## Project Background
+## Install and setup
 
-Insert project background information here.
+### Requirements
 
-## Install & Setup
+<!-- List only verified runtime versions, system tools, and external services. -->
 
-- R version
-- Python version
-- Other software
+- Runtime: `REPLACE_WITH_SUPPORTED_VERSION`
+- Package or environment manager: `REPLACE_WITH_TOOL`
 
-### Instructions
+### Installation
 
-Add installation and environment setup instructions here (e.g., conda, pip, virtualenv).
+<!-- Replace this block with commands that work from a clean checkout. -->
+
+```bash
+REPLACE_WITH_INSTALL_COMMAND
+```
 
 ## Usage
 
-Place code examples here and other ways to use this project/pipeline.
+<!-- Show the smallest useful example and describe its expected output. -->
+
+```bash
+REPLACE_WITH_USAGE_COMMAND
+```
+
+## Testing
+
+<!-- State any required setup before the test command. -->
+
+```bash
+REPLACE_WITH_TEST_COMMAND
+```
 
 ## Contributing
 
-We welcome contributions! [See the docs for guidelines](./CONTRIBUTING.md).
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull
+request.
 
 ## License
 
-View the [LICENSE](LICENSE) for this project.
+This project is available under the terms in [LICENSE](LICENSE).
 
-## Authors
+## Maintainers
 
-- Author Name [email](mailto:email@example.com) | Role | [username](https://github.com/username)
+<!-- List confirmed maintainers, roles, and profile links. -->
+
+- `REPLACE_WITH_MAINTAINER_NAME` | `REPLACE_WITH_ROLE` | `REPLACE_WITH_PROFILE_URL`
