@@ -1,66 +1,45 @@
-# GitHub Actions Workflow Templates
+# GitHub Actions workflow templates
 
-This folder contains reusable GitHub Actions workflow templates for CI/CD.
+Manually copied starting points for common test, package-build, and GitHub
+Pages workflows.
 
-## Templates
+| Workflow | Intended project |
+| --- | --- |
+| [Pytest](pytest-workflow.yml) | Python project with tests and a `requirements.txt` file |
+| [Test package build](test-package-build.yml) | Installable Python package with project metadata |
+| [Deploy Jekyll Pages](deploy-jekyll-pages.yml) | Jekyll site deployed through GitHub Pages |
 
-### Test Package Build
+## Before copying
 
-**[test-package-build.yml](test-package-build.yml)** - A workflow template for testing and building Python packages with multiple Python versions, test coverage, and Codecov integration.
+1. Copy one workflow into `.github/workflows/` in the destination repository.
+2. Replace every `REPLACE_WITH_...` value.
+3. Match branch names and runtime versions to the destination project.
+4. Remove services such as Codecov when they are not used.
+5. Confirm that repository secrets and GitHub Pages settings are configured.
+6. Review the complete workflow diff before enabling it.
 
-#### Customization
+The Python matrices are examples. They should match the versions declared in
+`pyproject.toml`, package metadata, or the project's support policy. The
+package workflow expects the project to install successfully with
+`python -m pip install -e .`. Adapt the dependency step when test requirements
+are provided through an extra or a dedicated requirements file.
 
-Before using this template, replace the following placeholders:
+The Jekyll workflow builds pull requests but deploys only pushes to `main` or
+manual runs. Change `main` if the destination repository uses a different
+default branch.
 
-- `<package_name>` - Replace with your package name (used in coverage reporting)
-- `<username>` - Replace with your GitHub username or organization
-- `<repository_name>` - Replace with your repository name
+## Security and maintenance
 
-#### Optional Customizations
+Actions are pinned to full commit SHAs with release versions recorded in
+comments. This prevents an existing workflow reference from changing without
+a repository update. Review new releases before updating a pin and configure
+Dependabot for the `github-actions` ecosystem after copying a workflow.
 
-- **Python versions**: Update the `python-version` matrix to include/exclude versions as needed
-- **Branches**: Modify the `branches` array to match your default branch name (if not `main`)
-- **Test command**: Adjust the pytest command if your test structure differs
-- **Codecov settings**: Modify Codecov flags, name, or other settings as needed
-- **Dependencies**: Update build dependencies or add additional installation steps
+The test workflows grant only read access to repository contents. The Pages
+workflow grants `pages: write` and `id-token: write` only to its deployment
+job.
 
-### Pytest Tests
-
-**[pytest-workflow.yml](pytest-workflow.yml)** - A lightweight workflow template for running pytest tests with coverage on multiple Python versions. Ideal for applications or libraries that don't require package building.
-
-#### Customization
-
-Before using this template, replace the following placeholders:
-
-- `<coverage_target>` - Replace with your module/package name for coverage reporting (e.g., `app`, `src`, `mypackage`)
-
-#### Optional Customizations
-
-- **Python versions**: Update the `python-version` matrix to include/exclude versions as needed
-- **Branches**: Modify the `branches` array to match your branch names (default includes `main`, `master`, `updates`)
-- **Test command**: Adjust the pytest command if your test structure differs
-- **Codecov settings**: Modify Codecov flags, name, or other settings as needed
-- **Dependencies**: Add additional installation steps if needed (e.g., `pip install pytest-cov`)
-
-### Deploy Jekyll to GitHub Pages
-
-**[deploy-jekyll-pages.yml](deploy-jekyll-pages.yml)** - A workflow template for building and deploying Jekyll sites to GitHub Pages with dependencies preinstalled.
-
-#### Customization
-
-Before using this template, replace the following placeholders:
-
-- `<default_branch>` - Replace with your default branch name (e.g., `main`, `master`)
-
-#### Optional Customizations
-
-- **Source/Destination paths**: Modify the `source` and `destination` paths in the Jekyll build step if your Jekyll site structure differs
-- **Concurrency settings**: Adjust the concurrency group name or cancellation behavior if needed
-- **Permissions**: Modify permissions if your repository requires different access levels
-
-## Usage
-
-1. Copy the workflow file to `.github/workflows/` in your repository
-2. Rename it as needed (e.g., `ci.yml`, `test.yml`)
-3. Replace all placeholders with your project-specific values
-4. Customize as needed for your project requirements
+See GitHub's guidance for
+[secure use of GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions)
+and
+[dependency caching](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#caching-dependencies).
